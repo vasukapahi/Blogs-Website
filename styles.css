@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    max-width:80vw;
+    padding: 2rem 1rem;
+    margin:0 auto;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header h2{
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.header p{
+    padding: 0.1rem;
+    font-size: 1.2rem;
+    color: rgb(88, 79, 79);
+}
+a{
+    text-decoration: none;
+}
+.header{
+    margin-bottom: 2.5rem;
+}
+.main_container{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1,1fr);
+}
+@media(min-width:650px){
+    .main_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(min-width:1080px){
+    .main_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media(min-width:1340px){
+    .main_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(235, 229, 229);
+    border-radius: 7px;
+}
+.card1imagecontainer{
+    position: relative;
+    overflow: hidden;
+    height: 14rem;
+}
+.card1image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card1_title{
+    display: flex;
+    padding: 0.5rem;
+}
+.card1:hover .card1image{
+    transform:scale(1.1);
+    transition-duration: 200ms;
+}.card1_title h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: black;
+    margin-bottom: 0.3rem;
+}
+.card1_title h2:hover{
+    color: blue;
+}
+.card1_title p{
+    font-size: 1rem;
+    line-height: 1rem;
+    color: rgb(77, 71, 71);
+    margin-bottom: 1rem;
+}
+.card_footer{
+    display: flex;
+    justify-content:space-between;
+}
+.card_author{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+}
+.authorimage{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(71, 63, 63);
+    border-radius: 50%;
+    background-color: rgb(218, 205, 205);
+}
+.authorinfo{
+    display: flex;
+    flex-direction: column;
+}
+.tag_container{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(116, 106, 106);
+    border-radius: 5px;
+}
+.authorname{
+    color: blue;
+}
